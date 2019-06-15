@@ -15,7 +15,7 @@ source ~/.bash_profile
 
 # pyenv install is broken on OSX 10.14.3
 CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install 3.7.3
-git clone
+git clone https://github.com/dominic-rossi/recreation-checker.git
 cd recreation-checker
 pyenv virtualenv 3.7.3 recreation-checker
 echo "recreation-checker" > .python-version
@@ -24,7 +24,7 @@ pip install .
 
 ### If you already have >= python3.6 installed:
 ```
-git clone
+git clone https://github.com/dominic-rossi/recreation-checker.git
 cd recreation-checker
 pip install .
 ```
