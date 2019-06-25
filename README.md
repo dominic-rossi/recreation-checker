@@ -2,34 +2,7 @@
 Simple script to check permit availability for a desired date and trail in Inyo National Forest and send a text message if a permit becomes available. In other words, this saves you having to check back on the website periodically to see if a permit has become available.
 
 # Setup
-## OSX
-### Assuming >= python3.6 is not already installed:
-```
-brew install pyenv
-brew install pyenv-virtualenv
-
-# at this point you should add what pyenv-virtualenv tells you to your ~/.bash_profile
-
-# Refresh your session
-source ~/.bash_profile
-
-# pyenv install is broken on OSX 10.14.3
-CFLAGS="-I$(xcrun --show-sdk-path)/usr/include" pyenv install 3.7.3
-git clone https://github.com/dominic-rossi/recreation-checker.git
-cd recreation-checker
-pyenv virtualenv 3.7.3 recreation-checker
-echo "recreation-checker" > .python-version
-pip install .
-```
-
-### If you already have >= python3.6 installed:
-```
-git clone https://github.com/dominic-rossi/recreation-checker.git
-cd recreation-checker
-pip install .
-```
-Feel free to substitute your preferred virtual environment creation method before running `pip install`.
-
+Install [Docker](https://docs.docker.com/install/#supported-platforms).
 
 Next you will need to create a `.env` file with the following contents:
 ```
@@ -51,7 +24,7 @@ The twilio values will come from your [twilio console](https://www.twilio.com/co
 
 # Run
 ```
-python check_availability.py
+make run
 ```
 
 # TODO:
